@@ -1,0 +1,85 @@
+/* ===========================================
+   Лабораторна робота №2. CSS Selectors Challenge
+   Файл стилів lab2.css — html не редагувався
+   =========================================== */
+
+/* 1. Перший елемент <li> — жирний шрифт */
+li:first-child {
+    font-weight: bold;
+}
+
+/* 2. Елементи <a>, які є останніми дочірніми елементами свого батька — червоний колір */
+a:last-child {
+    color: red;
+}
+
+/* 3. Елементи input, які вимкнено (disabled) — сірий фон */
+input:disabled {
+    background-color: gray;
+}
+
+/* 4. Елементи <p>, прямі дочірні елементи <div> — напівжирний шрифт */
+div > p {
+    font-weight: 600;
+}
+
+/* 5. Елементи з атрибутом href, що починається з https — зелений колір */
+[href^="https"] {
+    color: green;
+}
+
+/* 6. Елементи input з атрибутом type="text" — рамка 1px суцільна синя */
+input[type="text"] {
+    border: 1px solid blue;
+}
+
+/* 7. Елементи <li>, перші або останні дочірні елементи батька — розмір шрифту 24px */
+li:first-child,
+li:last-child {
+    font-size: 24px;
+}
+
+/* 8. Елементи <p>, нащадки елемента <div> — розмір шрифту 16px */
+div p {
+    font-size: 16px;
+}
+
+/* 9. Елементи <input> зі значенням checked — фон світло-блакитний */
+input:checked {
+    background-color: lightblue;
+}
+
+/* 10. Елементи <a>, прямі дочірні елементи <li> — підкреслення тексту */
+li > a {
+    text-decoration: underline;
+}
+
+/* 11. Елементи <li>, парні (кожен другий) дочірні елементи батька — жирний шрифт */
+li:nth-child(even) {
+    font-weight: bold;
+}
+
+/* 12. Елементи <input> type="text" і НЕ disabled — сірий фон */
+input[type="text"]:not(:disabled) {
+    background-color: gray;
+}
+
+/* 13. Елементи <p>, перші дочірні елементи батьківського елемента — розмір шрифту 24px */
+p:first-child {
+    font-size: 24px;
+}
+
+/* 14. Елемент <li>, що йде одразу після елемента з класом .special — перекреслений */
+.special + li {
+    text-decoration: line-through;
+}
+
+/* 15. Перша літера кожного елемента <p> — розмір шрифту 36px */
+p::first-letter {
+    font-size: 36px;
+}
+
+/* 16. ::after для кожного елемента <a> — вміст ↗ */
+a::after {
+    content: " ↗";
+}
